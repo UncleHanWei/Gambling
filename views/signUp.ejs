@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <% include ./models/bs_css.ejs %>
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h1>註冊帳號</h1>
+      </div>
+    </div>
+    <form action="/signUp" method="post">
+      <div class="row m-5">
+        <div class="col-5 m-auto border border-dark border-2">
+          <div class="row mt-2">
+            <div class="col-4 text-center">帳號</div>
+            <div class="col-8"><input name="username" type="text" class="w-100"></div>
+          </div>
+          <div class="row">
+            <div class="col-4 text-center">密碼</div>
+            <div class="col-8"><input name="password" type="password" class="w-100"></div>
+          </div>
+          <div class="row m-2">
+            <button class="btn btn-dark" type="submit">註冊</button>
+          </div>
+          <div class="row m-2">
+            <a href="/login" class="btn btn-dark">登入</a>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  
+  <% include ./models/bs_js.ejs %>
+</body>
+</html>

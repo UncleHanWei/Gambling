@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <% include ./models/bs_css.ejs %>
+  </head>
+  <body>
+    <% include ./navbar.ejs %>
+    <div class="container">
+      <h1>Hi <%= username %></h1>
+      <p>Welcome to <%= title %></p>
+      <div class="row">
+        <div class="col-12">
+          <div id="show">
+            <p>遊戲尚未開始，請等待莊家開始</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <% include ./models/bs_js.ejs %>
+    <script src="https://cdn.socket.io/4.4.1/socket.io.min.js" integrity="sha384-fKnu0iswBIqkjxrhQCTZ7qlLHOFEgNkRmK2vaO/LbTZSXdJfAu6ewRBdwHPhBo/H" crossorigin="anonymous"></script>
+    <script src="/javascripts/index.js"></script>
+  </body>
+</html>

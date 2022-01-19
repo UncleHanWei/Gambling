@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <% include ./models/bs_css.ejs %>
+  </head>
+  <body>
+    <% include ./navbar.ejs %>
+    <label for="stake">要押注的金額</label>
+    <input id="stake" type="text">
+    <label for="num">要猜的數字</label>
+    <input id="num" type="text">
+    <button class="btn btn-lg btn-success" onclick="stake()">下注</button>
+    <div id="show">
+      
+    </div>
+    <% include ./models/bs_js.ejs %>
+    <script src="https://cdn.socket.io/4.4.1/socket.io.min.js" integrity="sha384-fKnu0iswBIqkjxrhQCTZ7qlLHOFEgNkRmK2vaO/LbTZSXdJfAu6ewRBdwHPhBo/H" crossorigin="anonymous"></script>
+    <script src="/javascripts/game.js"></script>
+  </body>
+</html>

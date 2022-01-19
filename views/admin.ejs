@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    <%= title %>
+  </title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <% include ./models/bs_css.ejs %>
+</head>
+
+<body>
+  <% include ./navbar.ejs %>
+    <div class="container">
+      <h1>Hi <%= username %>
+      </h1>
+      <p>Welcome to <%= title %></p>
+      <label for="num">請輸入 1 ~ 5 之間的數字</label>
+      <input id="num" type="number">
+      <button id="start" class="btn btn-success" onclick="startGame()">開始遊戲</button>
+      <button id="end" class="btn btn-danger disabled" onclick="endGame()">開獎</button>
+      <div class="row mt-2">
+        <div id="players" class="col-8">
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.socket.io/4.4.1/socket.io.min.js"
+      integrity="sha384-fKnu0iswBIqkjxrhQCTZ7qlLHOFEgNkRmK2vaO/LbTZSXdJfAu6ewRBdwHPhBo/H"
+      crossorigin="anonymous"></script>
+    <script src="/javascripts/admin.js"></script>
+    <% include ./models/bs_js.ejs %>
+</body>
+
+</html>
